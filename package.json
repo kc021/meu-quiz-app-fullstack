@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "prisma migrate deploy && vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "postinstall": "prisma generate"
+  "dev": "vite",
+  "build": "prisma migrate deploy --schema=./api/prisma/schema.prisma && vite build",
+  "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+  "preview": "vite preview",
+  "postinstall": "prisma generate --schema=./api/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^5.15.0",
