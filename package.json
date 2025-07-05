@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
   "dev": "vite",
-  "build": "prisma migrate deploy --schema=./api/prisma/schema.prisma && vite build",
+  "build": "prisma generate --schema=./api/prisma/schema.prisma && prisma migrate deploy --schema=./api/prisma/schema.prisma && vite build",
+  "postinstall": "",
   "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-  "preview": "vite preview",
-  "postinstall": "prisma generate --schema=./api/prisma/schema.prisma"
+  "preview": "vite preview"
   },
   "dependencies": {
     "@prisma/client": "^5.15.0",
